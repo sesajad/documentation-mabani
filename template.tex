@@ -1,4 +1,3 @@
-
 \documentclass[9pt]{article}
 
 \usepackage[a4paper,margin=2cm,top=3cm]{geometry}
@@ -11,89 +10,78 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 
+\usepackage{tabularx}
+\usepackage{array}
+
 \usepackage[hidelinks]{hyperref}
 
 % header
 \usepackage{fancyhdr}
  
 \fancyhf{}
-\lhead{\includegraphics[width=1cm]{sharif-logo}}
+\lhead{دانشگاه صنعتی شریف}
 \rhead{تمرینِ نخست}
 \chead{مبانیِ برنامه‌نویسی}
 \cfoot{\thepage}
  
 
-\usepackage[extrafootnotefeatures,localise]{xepersian}
+\usepackage[extrafootnotefeatures]{xepersian}
 \settextfont{IRNazanin}
 
 
-\گزینش‌قلم‌لاتین‌متن[Scale=0.8]{Liberation Serif}
-\گزینش‌قلم‌اعدادفرمولها{IRNazanin}
+\setlatintextfont[Scale=0.8]{Liberation Serif}
+\setdigitfont{IRNazanin}
 
-\شروع{نوشتار}
-\begin {center}
-{\small \hspace*{-2mm} به نام خدا}
-\end{center}
-\vspace*{80mm}
-
-\thispagestyle{empty}
-\شروع{وسط‌چین}
-
-\درج‌تصویر[width=3cm]{sharif-logo}\\
-\شروع{درشت‌درشت}
-{\huge
-درس مبانی برنامه‌سازی \\
-}\bigskip{\large
-نیم‌سال اول 96-97\\
-\vspace*{2mm}
-دانشکدهٔ مهندسی کامپیوتر \\
-\hspace*{-3mm}
-دانشگاه صنعتی شریف \\
-}
-\پایان{درشت‌درشت}
-\پایان{وسط‌چین}
-\پرش‌بلند
-
-\bigskip
-
-\hrule
-\begin{center}
-\vspace{6mm}
-{\large \hspace*{6mm}
-مدرس 
-{\bf  \hspace*{3mm}
-مهران ریواده \\
-}\vspace{1mm}  
-تمرین
-{\bf  \hspace*{3mm}
-نخست\\
-}\vspace{1mm} \hspace*{-6mm}
-مبحث
-{\bf  \hspace*{3mm}
-IO\\
-}\vspace{1mm}\hspace*{2mm}
-موعد تحویل
-{\bf  \hspace*{3mm}
-15 آبان 1396\\
-}
-}
+\begin{document}
 
 
-\پرش‌بلند
+%%% first page %%%
+	\thispagestyle{empty}
+	
+	\begin{center}
+		به نام خدا
+	
+		\vskip 80mm
+	
+		\includegraphics[width=3cm]{sharif-logo}\\
+		\huge{درس مبانی برنامه‌سازی} \\
+		\bigskip
+		\large{نیم‌سال اول 96-97} \\
+		\medskip
+		دانشکدهٔ مهندسی کامپیوتر\\
+		دانشگاه صنعتی شریف \\
+		\bigskip
+		\hrule
+		\medskip
+		
+		{\def\arraystretch{1.3}
+		\begin{tabular}{>{\raggedright}p{0.4\textwidth} >{\raggedleft}p{0.4\textwidth}}
+			مدرس & \textbf{مهران ریواده} \tabularnewline
+			تمرین & \textbf{نخست} \tabularnewline
+			مبحث & \textbf{\rl{IO}} \tabularnewline
+			موعد تحویل & \textbf{۱۵ آبان ۱۳۹۶} \tabularnewline
+
+		\end{tabular}}
 
 
-\شروع{درشت}
-\شروع{فقرات}
-\فقره{پاسخ این‌تمرین را در قالب یک‌فایلِ\متن‌لاتین{pdf} در کوئرا آپلود کنید}
-\فقره{در صورت مشاهده‌ی هرگونه تقلب، نمره‌ی هر دو نفر -100 در نظر گرفته خواهد شد.}
-\فقره{به ازای هر روز دیرکرد در بارگذاری تمرین‌ها، 10 درصد جریمه منظور خواهد شد.}
-\فقره{در صورت بروز ابهام در مورد سوالات، می‌توانید حداکثر تا 24 ساعت قبل از موعد تحویل، سوالات خود را در سایت کوئرا بپرسید.}
-\پایان{فقرات}
-\پایان{درشت}
-\end{center}
-\صفحه‌شکن
-\سبک‌صفحه{fancy}
+		\bigskip
 
-سؤال نخست
 
-\پایان{نوشتار}
+	\end{center}
+	\begin{large}
+	\begin{itemize}
+	\item{پاسخ این‌تمرین را در قالب یک‌فایلِ \lr{pdf} در کوئرا آپلود کنید}
+	\item{در صورت مشاهده‌ی هرگونه تقلب، نمره‌ی هر دو نفر $-100$ در نظر گرفته خواهد شد.}
+	\item{به ازای هر روز دیرکرد در بارگذاری تمرین‌ها، 10 درصد جریمه منظور خواهد شد.}
+	\item{در صورت بروز ابهام در مورد سوالات، می‌توانید حداکثر تا 24 ساعت قبل از موعد تحویل، سوالات خود را در سایت کوئرا بپرسید.}
+	\end{itemize}
+	\end{large}
+	\pagebreak
+	
+%%% end of first page %%%
+
+\pagestyle{fancy}
+
+\section*{سؤال نخست}
+
+\end{document}
